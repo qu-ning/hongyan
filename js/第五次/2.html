@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #col {
+
+            background-color:
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>毛不易</h1>
+    <form name="form1" method="post" action="">
+
+        <p> <input type="button" name="Submit" value="变换背景" onClick="turncolors()"></p>
+
+        <input id="bnt1" type="button" value="-" />
+        <input id="bnt2" type="button" value="+" />
+
+        <div   id="text"><p> 毛不易，原名王维家，1994年10月1日出生于黑龙江省齐齐哈尔市泰来县，中国内地流行乐男歌手，毕业于杭州师范大学护理专业。</p>
+        <p> 2017年，参加腾讯视频选秀娱乐节目《明日之子》，获得全国总决赛冠军，从而正式进入演艺圈；
+            11月11日，推出个人原创单曲《项羽虞姬》 ；12月28日，获得腾讯娱乐白皮书音乐年度之星奖 。
+            2018年1月7日，获得首届金鲛奖年度十佳网络新星奖 ；4月，作为“无限唱作人”参加江苏卫视音乐唱作类真人秀节目《无限歌谣季》；
+            5月31日，推出首张个人录音室专辑《平凡的一天》 ；同年，获得亚洲新歌榜年度盛典年度最佳音乐人奖 、亚洲音乐盛典最具潜力男歌手奖、年度最佳唱作人奖。
+            2019年3月25日，其演唱的歌曲《平凡的一天》获得第26届东方风云榜音乐盛典十大金曲奖、最佳作词奖 ；8月，获2019福布斯中国100名人榜荣誉 。
+            2020年1月，以首发歌手身份加盟湖南卫视音乐竞技节目《歌手·当打之年》 ；1月22日，推出第2张个人音乐专辑《小王》 。
+            9月20日，举办毛不易2020“像我这样的人”线上演唱会 。</p>
+        </div>
+    </form>
+    <script>
+        var Arraycolor = new Array("#999", "salmon", "gold", "plum");
+
+        var n = 0;
+
+        function turncolors() {
+
+            if (n == (Arraycolor.length - 1))
+
+                n = 0;
+
+            n++;
+
+            document.bgColor = Arraycolor[n];
+
+        }
+
+        window.onload = function () {
+            var oBnt1 = document.getElementById('bnt1');
+            var oBnt2 = document.getElementById('bnt2');
+            var oP = document.getElementById('text');
+            var num = 14;
+            oBnt1.onclick = function () {
+                num--;
+                oP.style.fontSize = num + 'px';
+            }
+            oBnt2.onclick = function () {
+                num++;
+                oP.style.fontSize = num + 'px';
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>
